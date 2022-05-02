@@ -1,9 +1,9 @@
-# Desafio FrontEnd-Mentor 
 # Challenge FrontEnd-Mentor 
 
 ![Imagem-do-site](https://i.imgur.com/u8EciQ7.png)
 
 > Landing page feita com React, através do desafio do site [FrontEnd-Mentor](https://frontendmentor.io)
+___ 
 > Landing maked with React, challenge from [FrontEnd-Mentor](https://frontendmentor.io)
 
 
@@ -20,7 +20,9 @@ git clone https://github.com/hirokirigaya/room
 
 cd room
 ```
+___
 
+Portuguese 
 
 ## O que eu aprendi?
 
