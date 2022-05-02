@@ -17,4 +17,4 @@ git clone https://github.com/hirokirigaya/room
 
 cd room
 ```
-- Ou veja o demo [clicando aqui](https://room.vercel.app/)
+- Ou veja o demo [clicando aqui](https://room-mu.vercel.app/)
