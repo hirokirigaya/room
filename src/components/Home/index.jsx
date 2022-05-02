@@ -1,6 +1,7 @@
 import React from 'react'
 import './styles.css'
 import Navbar from '../Navbar'
+import Footer from '../Footer'
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation } from 'swiper';
@@ -88,6 +89,7 @@ function index() {
         <img src="../../../img/ambientlight.jpg" alt="img-light" className='img-light' />
 
       </section>
+      <Footer/>
     </main>
   )
 }
