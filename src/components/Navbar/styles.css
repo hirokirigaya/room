@@ -18,14 +18,25 @@
 .navbar ul li a {
   text-decoration: none;
   color: var(--white);
-  border-bottom: 2px solid transparent;
+  /* border-bottom: 2px solid transparent; */
   padding-bottom: 1rem;
   transition: 200ms ease-in-out;
+  position: relative;
 }
 
-.navbar ul li a:hover {
-  border-bottom: 2px solid var(--white);
+.navbar ul li a:hover:after {
+  content: '';
+  width: 50%;
+  height: 3px;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 1;
+  margin: 0 auto;
 }
+
 
 .logo {
   height: 15%;
