@@ -15,7 +15,7 @@ function index() {
 
   return (
     <>
-    <div className={open === true ? 'overlayon' : 'overlay'}></div>
+    <div className={open === true ? 'overlayon' : 'overlay'} onClick={openMenu}></div>
     <nav className='navbar'>
       <img src="../../../img/logo.svg" alt="logo" className='logo'/>
       <ul>
