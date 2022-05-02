@@ -96,14 +96,14 @@ main {
   padding: 2rem;
   cursor: pointer;
   transition: 200ms ease-in-out;
-  user-select: none;
+  /* user-select: none; */
 }
 .arrows .arrow-right {
   background-color: black;
   padding: 2rem;
   cursor: pointer;
   transition: 200ms ease-in-out;
-  user-select: none;
+  /* user-select: none; */
 }
 
 .arrows .arrow-left:hover,
