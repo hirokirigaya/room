@@ -1,0 +1,65 @@
+/*
+    
+      ROOT
+
+
+*/
+
+:root {
+--darkgray: hsl(0, 0%, 63%);
+--black: hsl(0, 0%, 0%);
+--white: hsl(0, 0%, 100%);
+--darkverygray: hsl(0, 0%, 27%);
+
+}
+
+
+
+/*
+
+      Reset styles
+
+*/
+
+*, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'League Spartan', sans-serif;
+}
+
+body, input, button {
+  font-size: 12px;
+}
+
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--darkverygray);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--darkgray);
+}

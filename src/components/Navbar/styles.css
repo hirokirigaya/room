@@ -1,0 +1,154 @@
+.navbar {
+  display: flex;
+  font-size: 1.25rem;
+  position: absolute;
+  z-index: 999;
+  align-items: center;
+  margin: 2rem 0rem 0rem 4rem;
+}
+
+.navbar ul{
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+  list-style: none;
+  
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: var(--white);
+  border-bottom: 2px solid transparent;
+  padding-bottom: 1rem;
+  transition: 200ms ease-in-out;
+}
+
+.navbar ul li a:hover {
+  border-bottom: 2px solid var(--white);
+}
+
+.logo {
+  height: 15%;
+  margin-right: 2rem;
+}
+
+.navbar-mobile {
+  display: none;
+}
+
+/*
+
+
+     R e s p o n s i v e
+
+
+     
+*/
+
+@media(max-width: 1024px) {
+  .navbar {
+    margin-left: 15%;
+  }
+}
+
+@media(max-width: 688px) {
+  main {
+    max-width: 688px;
+    margin: 0 auto;
+  }
+  .navbar {
+    display: none;
+  }
+  .navbar-mobile {
+    display: flex;
+    width: 80%;
+    position: absolute;
+    gap: 10rem;
+    z-index: 999;
+    margin-top: 2rem;
+    margin-left: 10%;
+    align-items: center;
+    height: 5vh;
+  }
+  .navbar-mobile .menu {
+    margin-left: 3.5rem;
+    font-size: 2rem;
+    color: var(--white);
+    cursor: pointer;
+    user-select: none;
+  }
+  .navbar-mobile .logo {
+    width: 10%;
+    height: 42%;
+  }
+  .navbar-mobile .navoff {
+    display: none;
+    transition: 200ms ease-in-out;
+    opacity: 0;
+    gap: 2rem;
+  }
+  .navbar-mobile .navon {
+    width: 100%;
+    position: absolute;
+    z-index: 9999;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    height: 15vh;
+    justify-content: space-around;
+    transition: 200ms ease-in-out;
+    opacity: 1;
+  }
+  
+  .navbar-mobile .navon .close {
+    font-size: 1.8rem;
+    color: var(--darkgray);
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+  }
+  .navbar-mobile .navon ul {
+    gap: 2rem;
+    display: flex;
+    list-style: none;
+  }
+  .navbar-mobile .navon ul li a {
+    text-decoration: none;
+    font-size: 1.25rem;
+    color: var(--black);
+    font-weight: 500;
+  }
+}
+
+@media(max-width: 415px) {
+  main {
+    max-width: 415px;
+    width: 100%;
+  }
+
+  .navbar-mobile .logo {
+    width: 12%;
+    height: 30%;
+  }
+  .navbar-mobile {
+    width: 100%;
+    margin: 0;
+    align-items: center;
+    height: 10vh;
+    gap: 6rem;
+  }
+  .navbar-mobile .navon {
+    justify-content: space-evenly;
+  }
+  .navbar-mobile .navon ul{
+    gap: 1rem;
+  }
+
+  .navbar-mobile .navon ul li a {
+    font-size: 1.25rem;
+  }
+
+  .navbar-mobile .navon .close {
+    font-size: 1.25rem;
+  }
+}

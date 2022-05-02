@@ -1,0 +1,278 @@
+.slider {
+  width: 56%;
+  height: 30%;
+  position: relative;
+}
+main {
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+/*
+
+
+      First Container
+
+
+*/
+
+.first-container {
+  display: flex;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.discover {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 400px;
+  gap: 2rem;
+  position: relative;
+}
+
+.discover h1 {
+  font-size: 2.5rem;
+  color: var(--black);
+  font-weight: 500;
+  margin-top: 3rem;
+}
+
+.discover p {
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: var(--darkgray);
+}
+
+.discover .button {
+  display: flex;
+  align-items: center;
+  width: 300px;
+}
+.discover .button button {
+  border: none;
+  cursor: pointer;
+  letter-spacing: 1rem;
+  font-weight: 500;
+  color: var(--darkgray);
+  transition: 200ms ease-in-out;
+  text-transform: uppercase;
+  background-color: transparent;
+  font-size: 1.25rem;
+}
+
+.discover .button svg {
+  margin-left: 1rem;
+  font-size: 2rem;
+  transition: 200ms ease-in-out;
+  color: var(--darkgray);
+}
+
+.discover .button button:hover {
+  margin-right: 1rem;
+}
+
+
+
+
+/*
+
+
+        Slider Arrows
+
+
+*/
+
+.arrows {
+  display: flex;
+  position: absolute;
+  bottom: 0.5%;
+  left: 100%;
+  z-index: 999;
+}
+.arrows .arrow-left {
+  background-color: black;
+  padding: 2rem;
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+  user-select: none;
+}
+.arrows .arrow-right {
+  background-color: black;
+  padding: 2rem;
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+  user-select: none;
+}
+
+.arrows .arrow-left:hover,
+.arrows .arrow-right:hover {
+  background-color: var(--darkverygray);
+}
+
+@media(min-width:1440px) {
+  .arrows .arrow-left {
+    padding: 2.6rem;
+  }
+  .arrows .arrow-right {
+    padding: 2.6rem;
+  }
+}
+
+
+/*
+
+
+      Second Container
+
+
+*/
+
+.second-container {
+  display: flex;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.second-container .img-dark,
+.second-container .img-light {
+  margin-top: -0.2rem;
+}
+
+.second-container .about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.second-container .about h2 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: var(--black);
+  font-weight: 700;
+  letter-spacing: .5rem;
+}
+
+.second-container .about p {
+  color: var(--darkgray);
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+.img-mob {
+  display: none;
+}
+
+/*
+
+
+        R e s p o n s i v e
+
+
+
+*/
+
+@media(max-width: 1024px) {
+  main {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  .slider {
+    margin: 0 auto;
+    width: 80%;
+  }
+  .arrows {
+    left: 80.8%;
+  } 
+
+
+  .first-container {
+    flex-direction: column;
+  }
+  .first-container .discover {
+    width: 80%;
+    padding: 0rem 2rem;
+    margin: 0 auto;
+    height: 40vh;
+  }
+
+
+  .second-container {
+    flex-direction: column;
+  }
+
+  .second-container .img-dark,
+  .second-container .img-light {
+  width: 80%;
+  margin: 0 auto;
+  }
+  .second-container .about {
+  width: 80%;
+  height: 30vh;
+  margin: 0 auto;
+
+  }
+}
+@media(max-width: 688px) {
+  main {
+    max-width: 688px;
+  }
+  .arrows {
+    left: 71.3%;
+  } 
+  .first-container .discover {
+    height: 60vh;
+  }
+  .first-container .discover {
+    height: 100%;
+    margin-bottom: 3rem;
+  }
+
+}
+
+@media(max-width: 415px) {
+  .first-container {
+    margin: 0 auto;
+  }
+  .img-desk {
+    display: none;
+  }
+  .img-mob {
+    display: flex;
+    width: 100%;
+  }
+  .slider {
+    margin: 0 auto;
+    width: 100%;
+  }
+  .arrows {
+    bottom: 0;
+    left: 62%;
+  }
+  .second-container .img-dark,
+  .second-container .img-light {
+  width: 100%;
+  margin: 0 auto;
+  }
+
+  .second-container .about {
+    margin: 2rem 0rem;
+    height: 100%;
+    width: 100%;
+  }
+
+  .first-container .discover {
+    height: 100%;
+    margin-bottom: 3rem;
+    width: 100%;
+  }
+}
+
+@media(max-width: 375px) {
+  .arrows {
+    left: 57.5%;
+  }
+}
