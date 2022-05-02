@@ -5,6 +5,8 @@ import Navbar from '../Navbar'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation } from 'swiper';
 
+import {useState} from 'react'
+
 SwiperCore.use([Navigation])
 
 import { useRef } from 'react';
@@ -18,15 +20,10 @@ import { CgArrowLongRight as Arrow } from 'react-icons/cg'
 
 function index() {
 
-  const prevRef = useRef(null)
-  const nextRef = useRef(null)
+  const [prevEl, setPrevEl] = useState(null)
+  const [nextEl, setNextEL] = useState(null)
 
-  // const swiper = new Swiper('.swiper', {
-  //   navigation: {
-  //     nextEl: '.swiper-button-next',
-  //     prevEl: '.swiper-button-prev',
-  //   },
-  // });
+
 
   return (
     <main>
@@ -36,22 +33,12 @@ function index() {
           <Swiper
             spaceBetween={0}
             slidesPerView={1}
-            // onSlideChange={() => console.log('slide change')}
-            // onSwiper={(swiper) => console.log(swiper)}
 
-            //navigation
+            // Use state in buttom
 
             modules={Navigation}
-            navigation={{
-              prevEl: prevRef.current,
-              nextEl: nextRef.current,
-            }}
-            onBeforeInit={(swiper) => {
-              swiper.params.navigation.prevEl = prevRef.current
-              swiper.params.navigation.nextEl = nextRef.current
-              console.log(prevRef)
-              console.log(nextRef)
-            }}
+            navigation={{ prevEl, nextEl }}
+    
           >
             <SwiperSlide>
               <img src="../../../img/slider1.jpg" alt="slider" className='img-desk' />
@@ -68,10 +55,10 @@ function index() {
           </Swiper>
 
           <div className='arrows'>
-            <div ref={prevRef} className="arrow-left">
+            <div ref={(node) => setPrevEl(node)} className="arrow-left">
               <img src="../../img/arrowleft.svg" alt="arrow-left" />
             </div>
-            <div ref={nextRef} className="arrow-right">
+            <div ref={(node) => setNextEL(node)} className="arrow-right">
               <img src="../../img/arrowright.svg" alt="" />
             </div>
           </div>
